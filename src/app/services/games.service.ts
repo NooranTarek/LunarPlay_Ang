@@ -11,7 +11,7 @@ export class GamesService {
    }
    baseUrl:string='https://api.noroff.dev/api/v1/';
    getAllGames(){
-    console.log(`$baseUrl`);
-    return this.http.get(`$baseUrl`+'gamehub')
+    // console.log(`${this.baseUrl}`);
+    return this.http.get(`${this.baseUrl}`+'gamehub')
    }
 }

@@ -14,13 +14,21 @@ games:Game[]=[];
   constructor(private gameList:GamesService){
 
   }
-  ngOnInit(){
-    this.getAllGames;
+ ngOnInit():void{
+    console.log("hello");  
+    this.getAllGames();
   }
   getAllGames(){
-    this.gameList.getAllGames().subscribe(
-    (res)=>console.log(res),
-    (error)=>console.log(error),
-    )
-  }
-}
+    this.gameList.getAllGames().subscribe({
+      next:(response:any)=>{
+        console.log("res",response);
+        this.games=response;
+        
+      },
+      error:(error)=>{
+        console.log(error);
+        
+      }
+    })
+    }
+    }
