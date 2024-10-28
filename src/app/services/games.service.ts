@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class GamesService {
 
-  constructor() { }
+  constructor(private http:HttpClient) {
+
+   }
+   baseUrl:string='https://api.noroff.dev/api/v1/';
+   getAllGames(){
+    console.log(`$baseUrl`);
+    return this.http.get(`$baseUrl`+'gamehub')
+   }
 }
