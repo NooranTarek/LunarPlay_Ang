@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { GameListComponent } from './game-list/game-list.component';
+import { GameDetailsComponent } from './game-details/game-details.component';
 
 export const routes: Routes = [
 
@@ -8,7 +9,7 @@ export const routes: Routes = [
         component:GameListComponent,
     },
     {
-        path:'gameDetails/id',
-        component:GameListComponent,
+        path:'game-details/:id',
+        component:GameDetailsComponent,
     }
 ];

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -10,8 +11,11 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class GameCardComponent {
 @Input() gameItem:any;
-constructor(private toaster: ToastrService){}
+constructor(private toaster: ToastrService,private router:Router){}
 onclick(){
   this.toaster.success("clicked successfully")
 }
+    redirectToDetails(id:string){
+      this.router.navigate(['game-details',id]);
+    }
 }

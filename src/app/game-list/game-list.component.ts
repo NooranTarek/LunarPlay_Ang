@@ -3,6 +3,7 @@ import { GamesService } from '../services/games.service';
 import { Game } from '../interfaces/game';
 import { ToastrService } from 'ngx-toastr';
 import { GameCardComponent } from '../game-card/game-card.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game-list',
@@ -14,7 +15,7 @@ import { GameCardComponent } from '../game-card/game-card.component';
 export class GameListComponent {
 games:Game[]=[];
   constructor(private toaster: ToastrService,
-    private gameList:GamesService){
+    private gameList:GamesService,private router:Router){
 
   }
  ngOnInit():void{

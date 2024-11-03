@@ -15,6 +15,6 @@ export class GamesService {
     return this.http.get(`${this.baseUrl}`+'gamehub')
    }
    getSpecificGame(id:any){
-    return this.http.get(`${this.baseUrl}/id`)
+    return this.http.get(`${this.baseUrl}`+`gamehub/`+`${id}`)
    }
 }
