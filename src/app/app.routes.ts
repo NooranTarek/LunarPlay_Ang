@@ -4,7 +4,11 @@ import { GameListComponent } from './game-list/game-list.component';
 export const routes: Routes = [
 
     {
-        path:'gameList',
+        path:'',
+        component:GameListComponent,
+    },
+    {
+        path:'gameDetails/id',
         component:GameListComponent,
     }
 ];

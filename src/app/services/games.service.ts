@@ -14,4 +14,7 @@ export class GamesService {
     // console.log(`${this.baseUrl}`);
     return this.http.get(`${this.baseUrl}`+'gamehub')
    }
+   getSpecificGame(id:any){
+    return this.http.get(`${this.baseUrl}/id`)
+   }
 }
